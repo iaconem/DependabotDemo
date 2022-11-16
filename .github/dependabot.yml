@@ -5,7 +5,7 @@ updates:
     directory: "/"
     schedule:
       interval: daily
-      time: "15:05"
+      time: "17:05"
       timezone: "Europe/London"
     # Disable version updates for npm dependencies
     # open-pull-requests-limit: 0
