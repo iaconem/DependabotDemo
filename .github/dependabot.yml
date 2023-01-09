@@ -15,7 +15,7 @@ updates:
     directory: "/javascript"
     schedule:
       interval: daily
-      time: "14:55"
+      time: "15:00"
       timezone: "Europe/London"
     #ignore:
         #- dependency-name: "express"
