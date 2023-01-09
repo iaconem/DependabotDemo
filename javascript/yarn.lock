@@ -10,10 +10,10 @@
     bessel "^1.0.2"
     jstat "^1.9.2"
 
-atob@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.0.tgz#ab2b150e51d7b122b9efc8d7340c06b6c41076bc"
-  integrity sha512-SuiKH8vbsOyCALjA/+EINmt/Kdl+TQPrtFgW7XZZcwtryFu9e5kQoX3bjCW6mIvGH1fbeAZZuvwGR5IlBRznGw==
+atob@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
+  integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
 bessel@^1.0.2:
   version "1.0.2"
@@ -33,7 +33,7 @@ jstat@^1.9.2:
   resolved "https://registry.yarnpkg.com/jstat/-/jstat-1.9.3.tgz#6a0e60c3b87fd714b61e765b77fc6b035437ee34"
   integrity sha512-/2JL4Xv6xfhN2+AEKQGTYr1LZTmBCR/5fHxJVvb9zWNsmKZfKrl3wYYK8SD/Z8kXkf+ZSusfumLZ4wDTHrWujA==
 
-lodash@^4.17.21:
+lodash@^4.17.19:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
