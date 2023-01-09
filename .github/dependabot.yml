@@ -15,8 +15,8 @@ updates:
     directory: "/javascript"
     schedule:
       interval: daily
-      time: "15:00"
-      timezone: "Europe/London"
+      #time: "15:00"
+      #timezone: "Europe/London"
     #ignore:
         #- dependency-name: "express"
           # For Express, ignore all updates for version 4 and 5
