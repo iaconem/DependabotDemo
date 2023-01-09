@@ -1,9 +1,9 @@
 name: Build NPM
 on:
   push:
-      branches: [ dependabot-patch-npm ]
+      branches: [ main ]
   pull_request:
-      branches: [ dependabot-patch-npm ]
+      branches: [ main ]
 #  release:
 #    types: [created]
 jobs:
