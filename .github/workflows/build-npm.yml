@@ -2,10 +2,10 @@ name: Build NPM
 on:
   push:
       branches: [ dependabot-patch-npm ]
-    pull_request:
+  pull_request:
       branches: [ dependabot-patch-npm ]
-  release:
-    types: [created]
+#  release:
+#    types: [created]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,9 +17,11 @@ jobs:
         with:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
-      - name: Install dependencies and build 🔧
-        run: npm ci && npm run build
-      - name: Publish package on NPM 📦
-        run: npm build
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: running npm ci 🔧
+        run: npm ci 
+      - name: running npm build🔧
+        run: npm run build        
+      #- name: Publish package on NPM 📦
+      #  run: npm build
+      #  env:
+      #    NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
