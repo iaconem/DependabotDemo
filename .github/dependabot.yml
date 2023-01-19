@@ -26,8 +26,8 @@ updates:
           # For AWS SDK, ignore all patch updates
         #- dependency-name: "aws-sdk"
         #  update-types: ["version-update:semver-patch"]      
-    target-branch: "dependabot-patch-npm"      
-    open-pull-requests-limit: 6
+    #target-branch: "dependabot-patch-npm"      
+    open-pull-requests-limit: 1
 #  - package-ecosystem: bundler
 #    directory: "/ruby"
 #    schedule:
