@@ -3,7 +3,8 @@ name: Dependabot reviewer
 on: pull_request_target
 
 env:
-  env_var: ${{secrets.MY_SECRET_TEST_WORKFLOW}}  
+  env_var: ${{secrets.MY_SECRET_TEST_WORKFLOW}} 
+  GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
 permissions:
   pull-requests: write
@@ -21,17 +22,19 @@ jobs:
         run: echo $env_var
       - name: testsecret2
         run: echo ${{secrets.MY_SECRET_TEST_WORKFLOW}}  
+      - name: testsecret3
+        run: echo $GH_TOKEN
       - name: Enable auto-merge for Dependabot PRs
         run: gh pr merge --auto --merge "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{secrets.MY_SECRET_TEST_WORKFLOW}}  
+          GH_TOKEN: ${{secrets.MY_SECRET_TEST_WORKFLOW}}  
       - name: Approve patch and minor updates
         if: ${{steps.dependabot-metadata.outputs.update-type == 'version-update:semver-patch' || steps.dependabot-metadata.outputs.update-type == 'version-update:semver-minor'}}
         run: gh pr review $PR_URL --approve -b "I'm **approving** this pull request because **it includes a patch or minor update**"
         env:
           PR_URL: ${{github.event.pull_request.htmy_secret_test_workflow}}
-          GITHUB_TOKEN: ${{ secrets.MY_SECRET_TEST_WORKFLOW }}
+          GH_TOKEN: ${{ secrets.MY_SECRET_TEST_WORKFLOW }}
       - name: Comment on major updates of non-development dependencies
         if: ${{steps.dependabot-metadata.outputs.update-type == 'version-update:semver-major' && steps.dependabot-metadata.outputs.dependency-type == 'direct:production'}}
         run: |
@@ -39,4 +42,4 @@ jobs:
           gh pr edit $PR_URL --add-label "requires-manual-qa"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{ secrets.MY_SECRET_TEST_WORKFLOW }}
+          GH_TOKEN: ${{ secrets.MY_SECRET_TEST_WORKFLOW }}
