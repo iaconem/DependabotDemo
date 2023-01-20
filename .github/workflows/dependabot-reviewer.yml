@@ -15,7 +15,7 @@ jobs:
         id: dependabot-metadata
         uses: dependabot/fetch-metadata@v1.3.1
       - name: testsecret
-        run: echo '${{ toJSON(secrets.MY_SECRET_TEST_WORKFLOW) }}'
+        run: echo '${{ toJSON(github.DependabotVar) }}'
       - name: Enable auto-merge for Dependabot PRs
         run: gh pr merge --auto --merge "$PR_URL"
         env:
