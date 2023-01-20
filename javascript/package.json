@@ -10,6 +10,6 @@
     "log4js": "6.2.0",
     "az-trust-filter": "1.0.1",
     "az-test-component": "0.1.3",
-    "npm-check": "npm-check"
+    "npm-check": "5.0.1"
   }
 }
