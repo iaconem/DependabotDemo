@@ -2,9 +2,9 @@ name: Dependabot reviewer
 
 on: pull_request_target
 
-env:
-  env_var: ${{secrets.MY_SECRET_TEST_WORKFLOW}} 
-  GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+#env:
+#  env_var: ${{secrets.MY_SECRET_TEST_WORKFLOW}} 
+#  GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
 permissions:
   pull-requests: write
@@ -18,12 +18,12 @@ jobs:
       - name: Dependabot metadata
         id: dependabot-metadata
         uses: dependabot/fetch-metadata@v1.3.1
-      - name: testsecret
-        run: echo $env_var
-      - name: testsecret2
-        run: echo ${{secrets.MY_SECRET_TEST_WORKFLOW}}  
-      - name: testsecret3
-        run: echo $GH_TOKEN
+     # - name: testsecret
+     #   run: echo $env_var
+     # - name: testsecret2
+     #   run: echo ${{secrets.MY_SECRET_TEST_WORKFLOW}}  
+     # - name: testsecret3
+     #   run: echo $GH_TOKEN
       - name: Enable auto-merge for Dependabot PRs
         run: gh pr merge --auto --merge "$PR_URL"
         env:
