@@ -8,6 +8,6 @@
     "lodash": "4.17.19",
     "atob":"2.1.0",
     "log4js": "6.2.0",
-    "az-trust-filter": "1.0.1"
+    "az-trust-filter": "1.0.0"
   }
 }
