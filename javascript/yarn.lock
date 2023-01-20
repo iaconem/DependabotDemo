@@ -37,10 +37,10 @@ az-test-component@0.1.3:
     core-js "^2.6.5"
     vue "^2.6.10"
 
-az-trust-filter@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/az-trust-filter/-/az-trust-filter-1.0.0.tgz#b928a86f7d508e43a862599c72602cfcde668127"
-  integrity sha512-NetJFsn42iLi2Lp0vmpoPz20F0oPCvMzMpDz+MinE4AAqqmSi7Ti0BiemZ/+B2hO01R4H7oGbN9tsy85ui2Kpg==
+az-trust-filter@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/az-trust-filter/-/az-trust-filter-1.0.1.tgz#d577d0285e7d50ca9ec87c936c5405b6b016bb5c"
+  integrity sha512-R96fUntEJFbuZhUYLl+pCyWbCPVSs8ki7i4y406HskCfTBS60W4nX1NEUo186xB7Pq7d8MblLtUnA5fOocyC8g==
 
 bessel@^1.0.2:
   version "1.0.2"
