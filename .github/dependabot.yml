@@ -28,6 +28,9 @@ updates:
         #  update-types: ["version-update:semver-patch"]      
     #target-branch: "dependabot-patch-npm"      
     open-pull-requests-limit: 10
+    labels:
+      - "npm dependencies"
+      - "javascript project"
 #  - package-ecosystem: bundler
 #    directory: "/ruby"
 #    schedule:
