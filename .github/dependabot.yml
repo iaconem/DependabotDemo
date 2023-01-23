@@ -29,8 +29,7 @@ updates:
     #target-branch: "dependabot-patch-npm"      
     open-pull-requests-limit: 10
     labels:
-      - "npm dependencies"
-      - "javascript project"
+      - "Dependabot javascript"
 #  - package-ecosystem: bundler
 #    directory: "/ruby"
 #    schedule:
