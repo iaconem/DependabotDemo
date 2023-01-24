@@ -11,6 +11,10 @@ jobs:
         with:
           target: minor
           github-token: ${{secrets.GITHUB_TOKEN}} 
+        #run: gh pr review $PR_URL --approve -b "I'm **approving** this pull request because **it includes a patch or minor update**"
+        env:
+          PR_URL: ${{github.event.pull_request.htmy_secret_test_workflow}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: Dependabot for patches
       - uses: actions/checkout@v2
         with:
