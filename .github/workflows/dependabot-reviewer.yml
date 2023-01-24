@@ -1,25 +1,35 @@
-on:
-  pull_request:
+name: Dependabot reviewer
+
+on: pull_request_target
+
+permissions:
+  pull-requests: write
+  contents: write
 
 jobs:
-  auto-merge:
+  review-dependabot-pr:
     runs-on: ubuntu-latest
     if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
     steps:
-      - name: Dependabot for minor updates
-      - uses: actions/checkout@v2
-      - uses: iaconem/dependabotDemo@v2
-        with:
-          target: minor
-          github-token: ${{secrets.GITHUB_TOKEN}} 
-        #run: gh pr review $PR_URL --approve -b "I'm **approving** this pull request because **it includes a patch or minor update**"
+      - name: Dependabot metadata
+        id: dependabot-metadata
+        uses: dependabot/fetch-metadata@v1.3.1
+      - name: Enable auto-merge for Dependabot PRs
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}  
+      - name: Approve patch and minor updates
+        if: ${{steps.dependabot-metadata.outputs.update-type == 'version-update:semver-patch' || steps.dependabot-metadata.outputs.update-type == 'version-update:semver-minor'}}
+        run: gh pr review $PR_URL --approve -b "I'm **approving** this pull request because **it includes a patch or minor update**"
         env:
           PR_URL: ${{github.event.pull_request.htmy_secret_test_workflow}}
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - name: Dependabot for patches
-      - uses: actions/checkout@v2
-      - uses: iaconem/dependabotDemo@v2
-        with:
-          target: patch
-          github-token: ${{secrets.GITHUB_TOKEN}} 
-
+      - name: Comment on major updates of non-development dependencies
+        if: ${{steps.dependabot-metadata.outputs.update-type == 'version-update:semver-major' && steps.dependabot-metadata.outputs.dependency-type == 'direct:production'}}
+        run: |
+          gh pr comment $PR_URL --body "I'm **not approving** this PR because **it includes a major update of a dependency used in production**"
+          gh pr edit $PR_URL --add-label "requires-manual-qa"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
