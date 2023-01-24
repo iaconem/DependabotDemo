@@ -8,6 +8,7 @@ jobs:
     steps:
       - name: Dependabot for minor updates
       - uses: actions/checkout@v2
+      - uses: iaconem/dependabotDemo@v2
         with:
           target: minor
           github-token: ${{secrets.GITHUB_TOKEN}} 
@@ -17,6 +18,7 @@ jobs:
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - name: Dependabot for patches
       - uses: actions/checkout@v2
+      - uses: iaconem/dependabotDemo@v2
         with:
           target: patch
           github-token: ${{secrets.GITHUB_TOKEN}} 
