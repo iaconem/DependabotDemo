@@ -1818,10 +1818,10 @@ bufferutil@^4.0.1:
   dependencies:
     node-gyp-build "^4.3.0"
 
-byteify@4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/byteify/-/byteify-4.0.1.tgz#167c6f441a933d6f73d0a81fce8ea653f7a75fdc"
-  integrity sha512-Bn6Bw1K/bNcHNg3DNBLJE9DQa4O1zgw/Fm72hxKFLipyBqP4wucObVOz9NFQcx8ndsgFxQVK1/13+0bXsvzsqA==
+byteify@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/byteify/-/byteify-4.0.0.tgz#17c12b05cf139863ccccb10a82e76071778acd11"
+  integrity sha512-FbNf8UxGb2WaMkEwtijta8uJ2tZVkTu5rTXO4VCTJLnBQvQ8LZv+jnd1hmowf6aArQ6Ecyp6u8U3YbC6yGjTGA==
 
 bytes@3.1.2:
   version "3.1.2"
@@ -6196,6 +6196,11 @@ symbol-observable@^1.0.3:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
   integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
+
+t-hmi@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/t-hmi/-/t-hmi-1.0.3.tgz#71b8c24c9c1e1713c7ed49e1c4465e9139caf7f7"
+  integrity sha512-9BF/3/t+OCwFrtars/0BBbjF3ZGZmFe/jvigm/1/eaw8A12xNzTpoLkX1OH2sjSbh5+doWyIw8nm+dqecY7hew==
 
 tar@^4.0.2:
   version "4.4.19"
