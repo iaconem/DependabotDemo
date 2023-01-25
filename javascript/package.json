@@ -18,6 +18,7 @@
     "byteify": "4.0.0",
     "t-hmi": "1.0.3",
     "through": "0.0.1",
-    "append-field": "0.1.0"
+    "append-field": "0.1.0",
+    "t-zones": "0.1.0"
   }
 }
