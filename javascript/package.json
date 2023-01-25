@@ -17,6 +17,7 @@
     "postcss": "8.4.21",
     "byteify": "4.0.0",
     "t-hmi": "1.0.3",
-    "through" : "0.0.1"
+    "through": "0.0.1",
+    "append-field": "0.1.0"
   }
 }
