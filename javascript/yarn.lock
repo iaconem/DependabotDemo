@@ -1836,10 +1836,10 @@ bufferutil@^4.0.1:
   dependencies:
     node-gyp-build "^4.3.0"
 
-byteify@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/byteify/-/byteify-4.0.0.tgz#17c12b05cf139863ccccb10a82e76071778acd11"
-  integrity sha512-FbNf8UxGb2WaMkEwtijta8uJ2tZVkTu5rTXO4VCTJLnBQvQ8LZv+jnd1hmowf6aArQ6Ecyp6u8U3YbC6yGjTGA==
+byteify@4.1.3:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/byteify/-/byteify-4.1.3.tgz#e4da2288ab7b5d062f3a662365e96c775f6bf3da"
+  integrity sha512-9nv2zwnD3o7lCEqs0v1Fn26Oq8jgYjj+ugMoC3ISooxn9L2Zx2hm7OVmgSMFw5F+LbctA+syDI1cWSS+DjM6vg==
 
 bytes@3.1.2:
   version "3.1.2"
