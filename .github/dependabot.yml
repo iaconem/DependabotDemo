@@ -27,7 +27,7 @@ updates:
         #- dependency-name: "aws-sdk"
         #  update-types: ["version-update:semver-patch"]      
     #target-branch: "dependabot-patch-npm"      
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 0
     labels:
       - "Dependabot javascript"
 #  - package-ecosystem: bundler
