@@ -14,7 +14,7 @@
     "truffle": "5.7.6",
     "fastq": "1.15.0",
     "p-limit": "4.0.0",
-    "postcss": "8.4.21",
+    "postcss": "8.4.31",
     "byteify": "4.1.3",
     "t-hmi": "1.0.3",
     "through": "0.0.1",
